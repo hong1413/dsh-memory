@@ -1,6 +1,6 @@
 {
   "name": "dsh-memory",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "private": true,
   "type": "module",
   "description": "Long-term experience memory for any LLM inside DeepSeek Harness: 5 model tools plus an interactive 3D star map.",
@@ -40,7 +40,9 @@
     "MARKET.md",
     "LICENSE",
     "CHANGELOG.md",
-    "*.png"
+    "*.png",
+    "icon.png",
+    "screenshots.json"
   ],
   "dsh": {
     "bundle": {
@@ -49,7 +51,9 @@
     "client": {
       "platform": "web",
       "immediately": true,
-      "inject": ["@deepseek-ai/dsh-client-connection"]
+      "inject": [
+        "@deepseek-ai/dsh-client-connection"
+      ]
     }
   }
 }

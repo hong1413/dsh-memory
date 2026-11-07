@@ -1,5 +1,18 @@
 # Changelog
 
+## 1.2.1 - 2026-11-07
+
+### Added
+
+- icon.png - 256x256 raster icon (the marketplace refuses SVG storefront icons).
+- screenshots.json - three storefront screenshots declared from the repository itself.
+- MARKET.md now follows the registry rule: one YAML file at data/plugins/<owner>__<repo>.yml.
+
+### Changed
+
+- All repository URLs point at hong1413/dsh-memory.
+- Flat package layout (no subdirectories), matching the published repository.
+
 All notable changes to this project are documented here.
 
 ## 1.2.0 — 2026-11-06

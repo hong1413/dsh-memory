@@ -13,14 +13,18 @@
         "zh": "给 DeepSeek Harness 里任意大模型装上跨会话记忆：五个工具（检索/读原文/概览/沉淀/回写效果），外带一张可交互的 3D 星图——大区是星云、小区是星团、每条经验是一颗星，待批提案化作可点的流星。写入走审批服务、失败关闭；冲突经验成对保留；成熟度只由显式回写推进。无 npm 依赖，只要 Python 3.8+。"
       },
       "npm": null,
-      "version": "1.2.0",
+      "version": "1.2.1",
       "install": "dsh plugin --profile desktop add github:hong1413/dsh-memory",
-      "capabilities": ["shell", "fs-write", "fs-read"],
+      "capabilities": [
+        "shell",
+        "fs-write",
+        "fs-read"
+      ],
       "screenshots": [
         "https://raw.githubusercontent.com/hong1413/dsh-memory/HEAD/starmap-3d.png",
         "https://raw.githubusercontent.com/hong1413/dsh-memory/HEAD/starmap-empty.png"
       ],
-      "icon": "https://raw.githubusercontent.com/hong1413/dsh-memory/HEAD/icon.svg"
+      "icon": "https://raw.githubusercontent.com/hong1413/dsh-memory/HEAD/icon.png"
     }
   ]
 }
