@@ -27,7 +27,7 @@ export const name = 'dsh-memory'
 export const inject = ['tools']
 
 const HERE = dirname(fileURLToPath(import.meta.url))
-const VENDORED_SCRIPT = join(HERE, 'vendor', 'memory_onefile.py')
+const VENDORED_SCRIPT = join(HERE, 'memory_onefile.py')
 /** 前端星图读取的只读数据路由。 */
 const STAR_MAP_PATH = '/dsh-memory/starmap.json'
 /** 星图上「批准/驳回」按钮的写路由（唯一写入口，人点才触发）。 */
@@ -90,7 +90,7 @@ function resolveScript(cfg) {
   return VENDORED_SCRIPT
 }
 
-const VENDORED_STARMAP = join(HERE, 'vendor', 'starmap_dump.py')
+const VENDORED_STARMAP = join(HERE, 'starmap_dump.py')
 
 /** 星图数据：一次性导出记忆库结构 JSON（只读，不落盘）。 */
 async function loadStarmap(cfg) {

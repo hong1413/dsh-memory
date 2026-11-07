@@ -14,7 +14,7 @@ interactive 3D star map**.
 
 No cloud, no vendor lock-in, no model-specific skill format — just five tools plus one settings page.
 
-![3D star map](screenshots/starmap-3d.png)
+![3D star map](starmap-3d.png)
 
 ## Features
 
@@ -86,7 +86,7 @@ config is valid:
 | Field | Default | Meaning |
 |---|---|---|
 | `dataDir` | `%LOCALAPPDATA%\doubao-memory\data` (`~/.local/share` elsewhere) | Where the JSON memory store lives |
-| `scriptPath` | bundled `vendor/memory_onefile.py` | Point at your own copy of the engine |
+| `scriptPath` | bundled `memory_onefile.py` | Point at your own copy of the engine |
 | `pythonExe` | `python` / `python3` | Interpreter to run the engine |
 | `maxResults` | `6` | Default result cap for `memory_search` |
 | `timeoutMs` | `30000` | Per-command timeout |
@@ -108,16 +108,16 @@ How did that advice work out? It saved me.              → memory_feedback good
 Or drive the same engine from a terminal (no Harness needed):
 
 ```bash
-python vendor/memory_onefile.py remember "Used cameras: check shutter count first" \
+python memory_onefile.py remember "Used cameras: check shutter count first" \
   --premise "in-person inspection" --counter "online listings without a hands-on test" \
   --score 0.85 --case-type success --tags camera,used
 
-python vendor/memory_onefile.py search "used camera inspection" --json
-python vendor/memory_onefile.py status
-python vendor/memory_onefile.py selftest      # 16 built-in assertions
+python memory_onefile.py search "used camera inspection" --json
+python memory_onefile.py status
+python memory_onefile.py selftest      # 16 built-in assertions
 ```
 
-The CLI has its own command reference: `python vendor/memory_onefile.py --help`.
+The CLI has its own command reference: `python memory_onefile.py --help`.
 
 ## The 3D star map
 
@@ -134,7 +134,7 @@ Settings → **Memory star map**:
 - Camera distance is derived from the scene's bounding sphere, so any data volume stays framed.
 - Empty stores show a friendly hint instead of an empty void.
 
-![Empty state](screenshots/starmap-empty.png)
+![Empty state](starmap-empty.png)
 
 ### Read-only data route
 
@@ -183,14 +183,14 @@ startup — restart DeepSeek Harness once.
 **Where is my memory stored?** Run `memory_status`, or read `dataDir` from the "status" output. Point
 several installations at the same `dataDir` to share one store.
 
-**Can I use it without DeepSeek Harness?** Yes. `vendor/memory_onefile.py` is a complete standalone
+**Can I use it without DeepSeek Harness?** Yes. `memory_onefile.py` is a complete standalone
 CLI with 30+ subcommands.
 
 **How do I reset everything?** Stop using it, delete `dataDir`, restart. Nothing is written elsewhere.
 
 ## Contributing
 
-Issues and pull requests are welcome. The engine has a self-test (`python vendor/memory_onefile.py
+Issues and pull requests are welcome. The engine has a self-test (`python memory_onefile.py
 selftest`, 16 assertions) and a regression script is included upstream for the retrieval and
 lifecycle rules.
 

@@ -52,8 +52,8 @@
   "install": "dsh plugin --profile desktop add github:hong1413/-",
   "capabilities": ["shell", "fs-write", "fs-read"],
   "screenshots": [
-    "https://raw.githubusercontent.com/hong1413/-/HEAD/screenshots/starmap-3d.png",
-    "https://raw.githubusercontent.com/hong1413/-/HEAD/screenshots/starmap-empty.png"
+    "https://raw.githubusercontent.com/hong1413/-/HEAD/starmap-3d.png",
+    "https://raw.githubusercontent.com/hong1413/-/HEAD/starmap-empty.png"
   ],
   "icon": "https://raw.githubusercontent.com/hong1413/-/HEAD/icon.svg"
 }
@@ -81,8 +81,8 @@
   install: dsh plugin --profile desktop add github:hong1413/-
   capabilities: [shell, fs-write, fs-read]
   screenshots:
-    - https://raw.githubusercontent.com/hong1413/-/HEAD/screenshots/starmap-3d.png
-    - https://raw.githubusercontent.com/hong1413/-/HEAD/screenshots/starmap-empty.png
+    - https://raw.githubusercontent.com/hong1413/-/HEAD/starmap-3d.png
+    - https://raw.githubusercontent.com/hong1413/-/HEAD/starmap-empty.png
   icon: https://raw.githubusercontent.com/hong1413/-/HEAD/icon.svg
 ```
 
@@ -115,7 +115,7 @@ Capabilities: shell, fs-write, fs-read
 Requires: DSH >= 0.2.1-rc.5 (declared via engines.dsh), Python 3.8+
 
 Repo: https://github.com/hong1413/-
-Screenshots: screenshots/starmap-3d.png, screenshots/starmap-empty.png
+Screenshots: starmap-3d.png, starmap-empty.png
 ```
 
 5. 等合并（README 说通常一天内站点与市场同步）。合并后检查：
@@ -149,13 +149,13 @@ npm publish               # 包名 dsh-memory，先确认没被占用
 
 市场的 Discover 支持添加自定义索引源，因此不必等收录，就能验证"卡片长什么样"：
 
-1. 把仓库推到 GitHub 后，`docs/plugins.json` 就变成可访问的索引文件（记得把 `hong1413` 换成你的用户名）
+1. 把仓库推到 GitHub 后，`plugins.json` 就变成可访问的索引文件（记得把 `hong1413` 换成你的用户名）
 2. 打开 **插件 → 插件市场 → 发现 → 索引源（Index sources）**
-3. 添加 `https://raw.githubusercontent.com/hong1413/-/main/docs/plugins.json`
-   （国内网络可换 `https://cdn.jsdelivr.net/gh/hong1413/-@main/docs/plugins.json`）
+3. 添加 `https://raw.githubusercontent.com/hong1413/-/main/plugins.json`
+   （国内网络可换 `https://cdn.jsdelivr.net/gh/hong1413/-@main/plugins.json`）
 4. 刷新后搜 `dsh-memory`
 
-`docs/plugins.json` 是按官方 `plugins.json` 的结构写的自测索引；如果某个版本的市场对索引
+`plugins.json` 是按官方 `plugins.json` 的结构写的自测索引；如果某个版本的市场对索引
 字段有额外要求，以官方 catalog 为准调整即可。
 
 ---

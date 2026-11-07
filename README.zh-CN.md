@@ -11,7 +11,7 @@
 
 全部本地存储、不绑定任何模型厂商、不依赖任何 npm 包。
 
-![3D 星图](screenshots/starmap-3d.png)
+![3D 星图](starmap-3d.png)
 
 ## 特性
 
@@ -81,7 +81,7 @@ plugin_manager: install_bundle  target = <dsh-memory 目录的绝对路径>
 | 字段 | 默认 | 说明 |
 |---|---|---|
 | `dataDir` | `%LOCALAPPDATA%\doubao-memory\data` | 记忆库位置（其他平台在 `~/.local/share`） |
-| `scriptPath` | 包内 `vendor/memory_onefile.py` | 想用你自己的引擎副本时指定 |
+| `scriptPath` | 包内 `memory_onefile.py` | 想用你自己的引擎副本时指定 |
 | `pythonExe` | `python` / `python3` | Python 解释器 |
 | `maxResults` | `6` | `memory_search` 默认返回条数 |
 | `timeoutMs` | `30000` | 单次命令超时 |
@@ -103,16 +103,16 @@ plugin_manager: install_bundle  target = <dsh-memory 目录的绝对路径>
 也可以完全不用 Harness，用终端驱动同一个引擎：
 
 ```bash
-python vendor/memory_onefile.py remember "二手相机验机：先查快门数再测跑焦" \
+python memory_onefile.py remember "二手相机验机：先查快门数再测跑焦" \
   --premise "线下当面验机" --counter "仅线上看图交易不适用" \
   --score 0.85 --case-type success --tags 相机,验机
 
-python vendor/memory_onefile.py search "二手相机 验机" --json
-python vendor/memory_onefile.py status
-python vendor/memory_onefile.py selftest     # 16 项内置断言
+python memory_onefile.py search "二手相机 验机" --json
+python memory_onefile.py status
+python memory_onefile.py selftest     # 16 项内置断言
 ```
 
-完整命令见 `python vendor/memory_onefile.py --help`。
+完整命令见 `python memory_onefile.py --help`。
 
 ## 3D 星图
 
@@ -126,7 +126,7 @@ python vendor/memory_onefile.py selftest     # 16 项内置断言
 - 相机距离按场景包围球自适应，数据多少都能完整入画
 - 空库显示引导文案，而不是一片空白
 
-![空库状态](screenshots/starmap-empty.png)
+![空库状态](starmap-empty.png)
 
 ### 只读数据口
 
@@ -171,13 +171,13 @@ POST /dsh-memory/proposals   { "id": "p_xxxxxxxxxxxx", "action": "approve" | "re
 
 **记忆存在哪？** 调 `memory_status`，或看「数据位置」一行；多个安装指向同一个 `dataDir` 即可共用一套库。
 
-**不用 DSH 能用吗？** 能，`vendor/memory_onefile.py` 是一个完整的独立 CLI（30+ 子命令）。
+**不用 DSH 能用吗？** 能，`memory_onefile.py` 是一个完整的独立 CLI（30+ 子命令）。
 
 **怎么重置？** 停用插件，删掉 `dataDir`，重启；插件不会在别处留数据。
 
 ## 贡献
 
-欢迎 issue / PR。引擎自带自检：`python vendor/memory_onefile.py selftest`（16 项断言）。
+欢迎 issue / PR。引擎自带自检：`python memory_onefile.py selftest`（16 项断言）。
 
 ## 许可证
 

@@ -17,8 +17,8 @@
       "install": "dsh plugin --profile desktop add github:hong1413/-",
       "capabilities": ["shell", "fs-write", "fs-read"],
       "screenshots": [
-        "https://raw.githubusercontent.com/hong1413/-/HEAD/screenshots/starmap-3d.png",
-        "https://raw.githubusercontent.com/hong1413/-/HEAD/screenshots/starmap-empty.png"
+        "https://raw.githubusercontent.com/hong1413/-/HEAD/starmap-3d.png",
+        "https://raw.githubusercontent.com/hong1413/-/HEAD/starmap-empty.png"
       ],
       "icon": "https://raw.githubusercontent.com/hong1413/-/HEAD/icon.svg"
     }

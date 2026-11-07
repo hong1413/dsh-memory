@@ -21,7 +21,8 @@
   "exports": {
     ".": "./index.js",
     "./client": "./client.js",
-    "./locale/*.json": "./locale/*.json",
+    "./locale/en.json": "./en.json",
+    "./locale/zh.json": "./zh.json",
     "./icon": "./icon.svg",
     "./package.json": "./package.json"
   },
@@ -29,16 +30,17 @@
     "index.js",
     "client.js",
     "cordis.patch.yml",
-    "vendor/memory_onefile.py",
-    "vendor/starmap_dump.py",
-    "locale/*.json",
+    "memory_onefile.py",
+    "starmap_dump.py",
+    "en.json",
+    "zh.json",
     "icon.svg",
     "README.md",
     "README.zh-CN.md",
     "MARKET.md",
     "LICENSE",
     "CHANGELOG.md",
-    "screenshots/*.png"
+    "*.png"
   ],
   "dsh": {
     "bundle": {
