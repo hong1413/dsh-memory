@@ -1,0 +1,13 @@
+{
+  "meta": {
+    "title": "Long-term Memory (any model)",
+    "description": "Cross-session experience memory for any LLM: search past experience, read one entry in full, save new lessons, and report outcomes. Data stays local and writes ask for your approval."
+  },
+  "tool": {
+    "search": "Search past experience",
+    "get": "Read one memory entry in full",
+    "status": "Memory store overview",
+    "save": "Save a new lesson",
+    "feedback": "Report how a lesson worked out"
+  }
+}

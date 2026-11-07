@@ -1,0 +1,53 @@
+{
+  "name": "dsh-memory",
+  "version": "1.2.0",
+  "private": true,
+  "type": "module",
+  "description": "Long-term experience memory for any LLM inside DeepSeek Harness: 5 model tools plus an interactive 3D star map.",
+  "engines": {
+    "dsh": ">=0.2.1-rc.5"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "cordis-plugin",
+    "memory",
+    "long-term-memory",
+    "agent-memory",
+    "llm",
+    "3d-visualization"
+  ],
+  "license": "MIT",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "vendor/memory_onefile.py",
+    "vendor/starmap_dump.py",
+    "locale/*.json",
+    "icon.svg",
+    "README.md",
+    "README.zh-CN.md",
+    "MARKET.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "screenshots/*.png"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": ["@deepseek-ai/dsh-client-connection"]
+    }
+  }
+}
