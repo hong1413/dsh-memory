@@ -12,10 +12,10 @@
 
 .EXAMPLE
   .\publish.ps1
-  .\publish.ps1 -RepoUrl https://github.com/hong1413/-.git -Message "feat: v1.2.0"
+  .\publish.ps1 -RepoUrl https://github.com/hong1413/dsh-memory.git -Message "feat: v1.2.0"
 #>
 param(
-  [string]$RepoUrl = "https://github.com/hong1413/-.git",
+  [string]$RepoUrl = "https://github.com/hong1413/dsh-memory.git",
   [string]$Message = "chore: release",
   [string]$Branch = "main",
   [switch]$StrictTls

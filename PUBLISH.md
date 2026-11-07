@@ -28,11 +28,11 @@
 winget install --id Git.Git -e
 
 # 2. 在 GitHub 建空仓库（Public，不要初始化 README），拿到地址：
-#    https://github.com/hong1413/-.git
+#    https://github.com/hong1413/dsh-memory.git
 
 # 3. 一键发布
 cd <本目录>
-.\publish.ps1 -RepoUrl https://github.com/hong1413/-.git -Message "feat: dsh-memory 1.2.0"
+.\publish.ps1 -RepoUrl https://github.com/hong1413/dsh-memory.git -Message "feat: dsh-memory 1.2.0"
 ```
 
 首次 push 会弹浏览器登录 GitHub。
@@ -44,7 +44,7 @@ git init
 git add -A
 git commit -m "feat: dsh-memory 1.2.0"
 git branch -M main
-git remote add origin https://github.com/hong1413/-.git
+git remote add origin https://github.com/hong1413/dsh-memory.git
 git push -u origin main
 ```
 
@@ -55,7 +55,7 @@ git push -u origin main
 README 里的克隆地址现在是占位符 `hong1413`。推送后把它替换成真实地址：
 
 ```
-https://github.com/hong1413/-
+https://github.com/hong1413/dsh-memory
 ```
 
 ---
@@ -75,7 +75,7 @@ Long-term experience memory for any LLM in DeepSeek Harness.
 
 ### Install
 ```bash
-git clone https://github.com/hong1413/-.git
+git clone https://github.com/hong1413/dsh-memory.git
 ```
 Then in DeepSeek Harness:
 `plugin_manager install_bundle target=<path to dsh-memory>`
@@ -93,7 +93,7 @@ MIT
 ## 检查清单
 
 - [ ] 仓库为 Public
-- [ ] 首页能看到 `screenshots/starmap-3d.png`（README 第一屏）
+- [ ] 首页能看到 `starmap-3d.png`（README 第一屏）
 - [ ] Releases 有 `v1.2.0` 标签与正文
 - [ ] Topics 已填
 - [ ] 安装命令里的路径示例正确

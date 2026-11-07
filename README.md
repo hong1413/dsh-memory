@@ -44,7 +44,7 @@ Design rules baked in:
 ### 1. Get the code
 
 ```bash
-git clone https://github.com/hong1413/-.git
+git clone https://github.com/hong1413/dsh-memory.git
 ```
 
 Or download the repository ZIP and extract it — the folder itself is the plugin package.

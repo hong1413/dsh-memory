@@ -1,19 +1,16 @@
 # 提交到 DSH 插件市场（awesome-dsh-plugin）
 
-插件市场（Plugs → Discover）的目录**不在市场应用仓库里**，而是来自策展仓库
+插件市场（Plugins → Discover）的目录**不在市场应用仓库里**，而是来自策展仓库
 [`awesome-dsh-plugin/awesome-dsh-plugin`](https://github.com/awesome-dsh-plugin/awesome-dsh-plugin)。
 被收录后，市场里能搜到、能一键安装，站点会生成插件页
-（slug 由仓库名推导，本仓库名为 `-`，因此形如
-`https://awesome-dsh-plugin.com/p/hong1413/-/`）。
+`https://awesome-dsh-plugin.com/p/hong1413/dsh-memory/`（slug = owner/仓库名）。
 
-> **建议先把仓库改名为 `dsh-memory`。** 现在仓库名是 `-`，会让三个地方变难读：
-> 安装简写 `github:hong1413/-`、市场页面 slug、jsDelivr 索引地址。
-> 改名后只需把本文件与 README 里的 `hong1413/-` 替换成 `hong1413/dsh-memory`（GitHub 会自动重定向旧地址）。
-> 下面所有命令都按当前仓库名 `-` 写好，可直接用。
+> 仓库：<https://github.com/hong1413/dsh-memory>（Public，默认分支 `main`，扁平布局）。
+> 安装简写：`github:hong1413/dsh-memory`。
 
 > 市场限制：只允许安装注册表里登记的来源，所以**先收录、才能一键装**。
 > 收录前可以用 README 里的 `install_bundle`（本地目录）或
-> `dsh plugin --profile desktop add github:hong1413/-` 手动安装，两者都可用。
+> `dsh plugin --profile desktop add github:hong1413/dsh-memory` 手动安装，两者都可用。
 
 ---
 
@@ -34,7 +31,7 @@
 
 ## 二、要提交的条目（两种写法，按仓库当时格式选一种）
 
-下面已按 `hong1413/-` 填好；如果你把仓库改名成 `dsh-memory`，把 `hong1413/-` 全局替换即可。
+下面已按 `hong1413/dsh-memory` 填好；如果你把仓库改名成 `dsh-memory`，把 `hong1413/dsh-memory` 全局替换即可。
 
 ### JSON
 
@@ -42,20 +39,20 @@
 {
   "name": "dsh-memory",
   "owner": "hong1413",
-  "url": "https://github.com/hong1413/-",
+  "url": "https://github.com/hong1413/dsh-memory",
   "category": "memory",
   "description": {
     "en": "Long-term experience memory for any LLM in DeepSeek Harness: five model tools (search / get / status / save / feedback) plus an interactive 3D star map where zones are nebulae, subzones are clusters, units are stars, and pending proposals fall as clickable meteors. Writes go through the approval service and fail closed; conflicts are kept as pairs; maturity moves only on explicit feedback. No npm dependencies, Python 3.8+ only.",
     "zh": "给 DeepSeek Harness 里任意大模型装上跨会话记忆：五个工具（检索/读原文/概览/沉淀/回写效果），外带一张可交互的 3D 星图——大区是星云、小区是星团、每条经验是一颗星，待批提案化作可点的流星。写入走审批服务、失败关闭；冲突经验成对保留；成熟度只由显式回写推进。无 npm 依赖，只要 Python 3.8+。"
   },
   "npm": null,
-  "install": "dsh plugin --profile desktop add github:hong1413/-",
+  "install": "dsh plugin --profile desktop add github:hong1413/dsh-memory",
   "capabilities": ["shell", "fs-write", "fs-read"],
   "screenshots": [
-    "https://raw.githubusercontent.com/hong1413/-/HEAD/starmap-3d.png",
-    "https://raw.githubusercontent.com/hong1413/-/HEAD/starmap-empty.png"
+    "https://raw.githubusercontent.com/hong1413/dsh-memory/HEAD/starmap-3d.png",
+    "https://raw.githubusercontent.com/hong1413/dsh-memory/HEAD/starmap-empty.png"
   ],
-  "icon": "https://raw.githubusercontent.com/hong1413/-/HEAD/icon.svg"
+  "icon": "https://raw.githubusercontent.com/hong1413/dsh-memory/HEAD/icon.svg"
 }
 ```
 
@@ -64,7 +61,7 @@
 ```yaml
 - name: dsh-memory
   owner: hong1413
-  url: https://github.com/hong1413/-
+  url: https://github.com/hong1413/dsh-memory
   category: memory
   description:
     en: >-
@@ -78,12 +75,12 @@
       外带一张可交互的 3D 星图——大区是星云、小区是星团、每条经验是一颗星，待批提案化作可点的流星。
       写入走审批服务、失败关闭；冲突经验成对保留；成熟度只由显式回写推进。无 npm 依赖，只要 Python 3.8+。
   npm: null
-  install: dsh plugin --profile desktop add github:hong1413/-
+  install: dsh plugin --profile desktop add github:hong1413/dsh-memory
   capabilities: [shell, fs-write, fs-read]
   screenshots:
-    - https://raw.githubusercontent.com/hong1413/-/HEAD/starmap-3d.png
-    - https://raw.githubusercontent.com/hong1413/-/HEAD/starmap-empty.png
-  icon: https://raw.githubusercontent.com/hong1413/-/HEAD/icon.svg
+    - https://raw.githubusercontent.com/hong1413/dsh-memory/HEAD/starmap-3d.png
+    - https://raw.githubusercontent.com/hong1413/dsh-memory/HEAD/starmap-empty.png
+  icon: https://raw.githubusercontent.com/hong1413/dsh-memory/HEAD/icon.svg
 ```
 
 `category` 用注册表里已有的 **`memory`（记忆）** 分类，和本插件最贴。
@@ -92,7 +89,7 @@
 
 ## 三、提交流程
 
-1. 先把仓库推到 GitHub（见 `PUBLISH.md`），确认 `https://github.com/hong1413/-` 可匿名访问。
+1. 先把仓库推到 GitHub（见 `PUBLISH.md`），确认 `https://github.com/hong1413/dsh-memory` 可匿名访问。
 2. Fork + 克隆 `https://github.com/awesome-dsh-plugin/awesome-dsh-plugin`。
 3. 在读到的插件清单文件里按既有格式**追加一条**（就是上面那份条目；字段名以仓库当前文件为准）。
 4. 提交 PR，标题与正文参考：
@@ -114,7 +111,7 @@ Category: memory
 Capabilities: shell, fs-write, fs-read
 Requires: DSH >= 0.2.1-rc.5 (declared via engines.dsh), Python 3.8+
 
-Repo: https://github.com/hong1413/-
+Repo: https://github.com/hong1413/dsh-memory
 Screenshots: starmap-3d.png, starmap-empty.png
 ```
 
@@ -122,7 +119,7 @@ Screenshots: starmap-3d.png, starmap-empty.png
    - `https://awesome-dsh-plugin.com/p/hong1413/dsh-memory/` 能打开
    - 市场 Discover 里搜 `dsh-memory` 能搜到
    - 卡片显示 DSH 版本要求、截图、能力标签
-   - 一键安装走的是 `github:hong1413/-`
+   - 一键安装走的是 `github:hong1413/dsh-memory`
 
 ---
 
@@ -151,8 +148,8 @@ npm publish               # 包名 dsh-memory，先确认没被占用
 
 1. 把仓库推到 GitHub 后，`plugins.json` 就变成可访问的索引文件（记得把 `hong1413` 换成你的用户名）
 2. 打开 **插件 → 插件市场 → 发现 → 索引源（Index sources）**
-3. 添加 `https://raw.githubusercontent.com/hong1413/-/main/plugins.json`
-   （国内网络可换 `https://cdn.jsdelivr.net/gh/hong1413/-@main/plugins.json`）
+3. 添加 `https://raw.githubusercontent.com/hong1413/dsh-memory/main/plugins.json`
+   （国内网络可换 `https://cdn.jsdelivr.net/gh/hong1413/dsh-memory@main/plugins.json`）
 4. 刷新后搜 `dsh-memory`
 
 `plugins.json` 是按官方 `plugins.json` 的结构写的自测索引；如果某个版本的市场对索引
@@ -166,7 +163,7 @@ npm publish               # 包名 dsh-memory，先确认没被占用
 
 ```bash
 # 任意机器，任意 profile
-dsh plugin --profile <profile> add github:hong1413/-
+dsh plugin --profile <profile> add github:hong1413/dsh-memory
 ```
 
 装完刷新页面；3D 星图是客户端插件，**首次装完要重启一次应用**。

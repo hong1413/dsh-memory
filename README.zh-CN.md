@@ -41,7 +41,7 @@
 ### 1. 获取代码
 
 ```bash
-git clone https://github.com/hong1413/-.git
+git clone https://github.com/hong1413/dsh-memory.git
 ```
 
 或者直接下载仓库 ZIP 解压——这个目录本身就是插件包。

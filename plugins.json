@@ -1,12 +1,12 @@
 {
   "name": "dsh-memory",
-  "url": "https://github.com/hong1413/-",
+  "url": "https://github.com/hong1413/dsh-memory",
   "updated": "2026-11-06",
   "plugins": [
     {
       "name": "dsh-memory",
       "owner": "hong1413",
-      "url": "https://github.com/hong1413/-",
+      "url": "https://github.com/hong1413/dsh-memory",
       "category": "memory",
       "description": {
         "en": "Long-term experience memory for any LLM in DeepSeek Harness: five model tools (search / get / status / save / feedback) plus an interactive 3D star map where zones are nebulae, subzones are clusters, units are stars, and pending proposals fall as clickable meteors. Writes go through the approval service and fail closed; conflicts are kept as pairs; maturity moves only on explicit feedback. No npm dependencies, Python 3.8+ only.",
@@ -14,13 +14,13 @@
       },
       "npm": null,
       "version": "1.2.0",
-      "install": "dsh plugin --profile desktop add github:hong1413/-",
+      "install": "dsh plugin --profile desktop add github:hong1413/dsh-memory",
       "capabilities": ["shell", "fs-write", "fs-read"],
       "screenshots": [
-        "https://raw.githubusercontent.com/hong1413/-/HEAD/starmap-3d.png",
-        "https://raw.githubusercontent.com/hong1413/-/HEAD/starmap-empty.png"
+        "https://raw.githubusercontent.com/hong1413/dsh-memory/HEAD/starmap-3d.png",
+        "https://raw.githubusercontent.com/hong1413/dsh-memory/HEAD/starmap-empty.png"
       ],
-      "icon": "https://raw.githubusercontent.com/hong1413/-/HEAD/icon.svg"
+      "icon": "https://raw.githubusercontent.com/hong1413/dsh-memory/HEAD/icon.svg"
     }
   ]
 }
